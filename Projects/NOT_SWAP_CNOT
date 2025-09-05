@@ -60,6 +60,7 @@ print(qc.draw(output='text'))
 ## Circuit Visualization from matplotlib
 
 ADD A PHOTO
+[image](project_1.jpeg)
 
 ---
 
