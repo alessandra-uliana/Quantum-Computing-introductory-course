@@ -1,0 +1,90 @@
+# Quantum Circuit Simulator: NOT, SWAP & CNOT
+
+A beginner-level quantum circuit project using Qiskit.  
+This project demonstrates a 2-qubit quantum circuit with NOT, SWAP, and CNOT gates, including measurement. Even without simulation, it shows the structure and logic of the circuit.
+
+---
+
+## Objectives
+
+- Combine basic quantum gates (NOT, SWAP, CNOT) in a single circuit
+- Visualize the circuit both textually and graphically
+- Explain the expected measurement results
+- Document and share the learning process
+
+---
+
+## Circuit Description
+
+The circuit has 2 qubits:
+
+1. **NOT (X) gate** on qubit 0  
+2. **SWAP gate** between qubit 0 and qubit 1  
+3. **CNOT gate** (control: qubit 0, target: qubit 1)  
+4. **Measurement** of both qubits  
+
+**Expected output:** `|0⟩|1⟩`
+
+---
+
+## Code Example
+
+```python
+from qiskit import QuantumCircuit
+import matplotlib.pyplot as plt
+
+# Create a 2-qubit quantum circuit
+qc = QuantumCircuit(2)
+
+# Apply NOT gate on qubit 0
+qc.x(0)
+
+# Apply SWAP gate between qubits 0 and 1
+qc.swap(0, 1)
+
+# Apply CNOT gate: qubit 0 as control, qubit 1 as target
+qc.cx(0, 1)
+
+# Measure both qubits
+qc.measure_all()
+
+# Display the circuit graphically
+qc.draw(output='mpl')
+plt.show()
+
+# Display the circuit in text form
+print(qc.draw(output='text'))
+
+# The expected output is |0⟩|1⟩
+
+## Circuit Visualization from matplotlib
+
+ADD A PHOTO
+
+---
+
+## Expected Results
+
+Since we are not running a simulator, the expected measurement result is:
+
+```
+|0⟩|1⟩
+```
+
+---
+
+## Conclusion & Next Steps
+
+- Demonstrates basic understanding of quantum gates and circuit construction
+- Next steps could include:
+  - Adding more qubits
+  - Exploring superposition and entanglement
+  - Running the circuit on a real quantum computer or simulator
+
+---
+
+## Resources
+
+- [Qiskit Documentation](https://qiskit.org/documentation/)
+- Quantum Computing for Everyone (edX course)
+- Medium articles or tutorials about quantum gates and circuits
